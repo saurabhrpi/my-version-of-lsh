@@ -53,7 +53,6 @@ int lsh_cd(char **args)
   if (args[1] == NULL) {
     fprintf(stderr, "lsh: expected argument to \"cd\"\n");
   } else {
-      printf("chdir args1 : %d\n",chdir(args[1]));
       if (chdir(args[1]) != 0) {
        perror("lsh");
     }
