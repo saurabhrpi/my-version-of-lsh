@@ -1,7 +1,7 @@
 /***************************************************************************//**
   @file         main.c
   @author       Saurabh Sharma
-  @date         Thursday,  16 Jult 2018
+  @date         Thursday,  16 July 2018
   @brief        LSH 
 *******************************************************************************/
 
@@ -52,8 +52,9 @@ int lsh_cd(char **args)
   if (args[1] == NULL) {
     fprintf(stderr, "lsh: expected argument to \"cd\"\n");
   } else {
-    if (chdir(args[1]) != 0) {
-      perror("lsh");
+      printf("chdir args1 : %d\n",chdir(args[1]));
+      if (chdir(args[1]) != 0) {
+       perror("lsh");
     }
   }
   return 1;
@@ -67,7 +68,7 @@ int lsh_cd(char **args)
 int lsh_help(char **args)
 {
   int i;
-  printf("Saurabh's version of Stephen B's LSH\n");
+  printf("Stephen Brennan's LSH\n");
   printf("Type program names and arguments, and hit enter.\n");
   printf("The following are built in:\n");
 
@@ -102,6 +103,7 @@ int lsh_launch(char **args)
   pid = fork();
   if (pid == 0) {
     // Child process
+    printf("inside child process\n");
     if (execvp(args[0], args) == -1) {
       perror("lsh");
     }
@@ -111,6 +113,8 @@ int lsh_launch(char **args)
     perror("lsh");
   } else {
     // Parent process
+    printf("inside parent process\n");
+    printf("status: %d\n",status);
     do {
       waitpid(pid, &status, WUNTRACED);
     } while (!WIFEXITED(status) && !WIFSIGNALED(status));
@@ -138,7 +142,7 @@ int lsh_execute(char **args)
       return (*builtin_func[i])(args);
     }
   }
-
+  printf("lsh_launch ret :%d\n",lsh_launch(args));
   return lsh_launch(args);
 }
 
@@ -162,14 +166,17 @@ char *lsh_read_line(void)
   while (1) {
     // Read a character
     c = getchar();
-
+    printf("c is: %c\n", c);
     if (c == EOF) {
       exit(EXIT_SUCCESS);
     } else if (c == '\n') {
+      printf("about to be zero terminated\n");  
       buffer[position] = '\0';
+      printf("buffer returned: %s\n", buffer);
       return buffer;
     } else {
       buffer[position] = c;
+      printf("buffer is: %s\n", buffer);
     }
     position++;
 
@@ -203,7 +210,10 @@ char **lsh_split_line(char *line)
     exit(EXIT_FAILURE);
   }
 
+  printf("line before strtok: %s\n",line);
   token = strtok(line, LSH_TOK_DELIM);
+  printf("line after strtok: %s\n",line);
+  printf("token: %s\n",token);
   while (token != NULL) {
     tokens[position] = token;
     position++;
@@ -218,9 +228,10 @@ char **lsh_split_line(char *line)
         exit(EXIT_FAILURE);
       }
     }
-
+    printf("token before second strtok : %s\n",token);
     token = strtok(NULL, LSH_TOK_DELIM);
-  }
+    printf("token after second strtok: %s\n",token);
+ }
   tokens[position] = NULL;
   return tokens;
 }
@@ -237,6 +248,7 @@ void lsh_loop(void)
   do {
     printf("> ");
     line = lsh_read_line();
+    printf("line obtained from read_line: %s\n", line);
     args = lsh_split_line(line);
     status = lsh_execute(args);
 
