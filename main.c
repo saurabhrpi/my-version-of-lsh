@@ -1,8 +1,9 @@
 /***************************************************************************//**
-  @file         main.c
-  @author       Saurabh Sharma
-  @date         Thursday,  16 July 2018
-  @brief        LSH 
+  @file         	main.c
+  @author       	Saurabh Sharma
+  @inspired from	https://github.com/brenns10/lsh 
+  @date         	Thursday,  16 July 2018
+  @brief        	LSH 
 *******************************************************************************/
 
 #include <sys/wait.h>
