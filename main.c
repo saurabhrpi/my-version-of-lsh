@@ -196,7 +196,7 @@ char *lsh_read_line(void)
 #define LSH_TOK_DELIM " \t\r\n\a"
 /**
    @brief Split a line into tokens (very naively).
-   @param line The line.
+   @param line from lsh_read_line.
    @return Null-terminated array of tokens.
  */
 char **lsh_split_line(char *line)
