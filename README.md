@@ -6,8 +6,8 @@ It demonstrates the basics of how a shell works. That is: read, parse, fork, exe
 
 Since the purpose is to create a simple shell, it has the following limitations:  
   
-Commands must be on a single line.  
-Arguments must be separated by whitespace.  
-No quoting arguments or escaping whitespace.  
-No piping or redirection.  
-Only builtins are: cd, help, exit.  
+&nbsp;&nbsp;&nbsp;Commands must be on a single line.  
+&nbsp;&nbsp;&nbsp;Arguments must be separated by whitespace.  
+&nbsp;&nbsp;&nbsp;No quoting arguments or escaping whitespace.  
+&nbsp;&nbsp;&nbsp;No piping or redirection.  
+&nbsp;&nbsp;&nbsp;Only builtins are: cd, help, exit.  
