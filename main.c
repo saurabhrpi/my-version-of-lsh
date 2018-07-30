@@ -29,6 +29,9 @@ char *builtin_str[] = {
   "exit"
 };
 
+/*
+Function pointers
+*/
 int (*builtin_func[]) (char **) = {
   &lsh_cd,
   &lsh_help,
