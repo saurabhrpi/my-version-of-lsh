@@ -95,7 +95,7 @@ int lsh_exit(char **args)
 
 /**
   @brief Launch a program and wait for it to terminate.
-  @param args Null terminated list of arguments (including program).
+  @param args - Null terminated list of arguments (including program).
   @return Always returns 1, to continue execution.
  */
 int lsh_launch(char **args)
