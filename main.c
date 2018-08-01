@@ -30,7 +30,7 @@ char *builtin_str[] = {
 };
 
 /*
-Function pointers
+Array of Function pointers one for each declared above
 */
 int (*builtin_func[]) (char **) = {
   &lsh_cd,
