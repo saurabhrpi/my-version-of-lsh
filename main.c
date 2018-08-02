@@ -120,7 +120,7 @@ int lsh_launch(char **args)
     printf("status: %d\n",status);
     do {
       waitpid(pid, &status, WUNTRACED);
-    } while (!WIFEXITED(status) && !WIFSIGNALED(status));
+    } while (!WIFEXITED(status) && !WIFSIGNALED(status)); // Check if the condition holds for the updated value of status 
   }
 
   return 1;
