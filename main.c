@@ -85,7 +85,7 @@ int lsh_help(char **args)
 
 /**
    @brief Builtin command: exit.
-   @param args List of args.  Not examined.
+   @param args - List of args.  Not examined.
    @return Always returns 0, to terminate execution.
  */
 int lsh_exit(char **args)
