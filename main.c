@@ -101,12 +101,11 @@ int lsh_exit(char **args)
 int lsh_launch(char **args)
 {
   pid_t pid;
-  int status;
+  int status;    
 
   pid = fork();
   if (pid == 0) {
     // Child process
-    printf("inside child process\n");
     if (execvp(args[0], args) == -1) {
       perror("lsh");
     }
@@ -116,8 +115,6 @@ int lsh_launch(char **args)
     perror("lsh");
   } else {
     // Parent process
-    printf("inside parent process\n");
-    printf("status: %d\n",status);
     do {
       waitpid(pid, &status, WUNTRACED);
     } while (!WIFEXITED(status) && !WIFSIGNALED(status)); // Check if the condition holds for the updated value of status 
