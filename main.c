@@ -101,7 +101,7 @@ int lsh_exit(char **args)
 int lsh_launch(char **args)
 {
   pid_t pid;
-  int status;    
+  int status;   // a variable modified by waitpid() and then subsequently checked by wifexited and wifsignaled
 
   pid = fork();
   if (pid == 0) {
