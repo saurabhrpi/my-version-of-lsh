@@ -139,7 +139,7 @@ int lsh_execute(char **args)
 
   for (i = 0; i < lsh_num_builtins(); i++) {
     if (strcmp(args[0], builtin_str[i]) == 0) {
-      return (*builtin_func[i])(args);
+      return (*builtin_func[i])(args); // execute the built-in commands
     }
   }
   printf("lsh_launch ret :%d\n",lsh_launch(args));
