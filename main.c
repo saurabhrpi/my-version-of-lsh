@@ -119,7 +119,7 @@ int lsh_launch(char **args)
       waitpid(pid, &status, WUNTRACED);
     } while (!WIFEXITED(status) && !WIFSIGNALED(status)); // Check if the condition holds for the updated value of status 
   }
-
+  // only parent process reaches here
   return 1;
 }
 
