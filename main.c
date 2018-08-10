@@ -150,7 +150,7 @@ int lsh_execute(char **args)
 
 #define LSH_RL_BUFSIZE 1024
 /**
-   @brief Read a line of input from stdin.
+   @brief Read a line of input from stdin. Maintain a buffer of 1024 chars.
    @return The line from stdin.
  */
 char *lsh_read_line(void)
