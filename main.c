@@ -172,13 +172,10 @@ char *lsh_read_line(void)
     if (c == EOF) {
       exit(EXIT_SUCCESS); //Exit successfully
     } else if (c == '\n') {
-      printf("about to be zero terminated\n");  
       buffer[position] = '\0';
-      printf("buffer returned: %s\n", buffer);
       return buffer;
     } else {
       buffer[position] = c;
-      printf("buffer is: %s\n", buffer);
     }
     position++;
 
