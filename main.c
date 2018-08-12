@@ -170,7 +170,7 @@ char *lsh_read_line(void)
     c = getchar();
     printf("c is: %c\n", c);
     if (c == EOF) {
-      exit(EXIT_SUCCESS);
+      exit(EXIT_SUCCESS); //Exit successfully
     } else if (c == '\n') {
       printf("about to be zero terminated\n");  
       buffer[position] = '\0';
