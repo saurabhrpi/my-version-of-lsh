@@ -168,7 +168,6 @@ char *lsh_read_line(void)
   while (1) {
     // Read a character
     c = getchar();
-    printf("c is: %c\n", c);
     if (c == EOF) {
       exit(EXIT_SUCCESS); //Exit successfully
     } else if (c == '\n') {
