@@ -174,7 +174,7 @@ char *lsh_read_line(void)
       buffer[position] = '\0';
       return buffer; // This is the only place where the return takes place
     } else {
-      buffer[position] = c;
+      buffer[position] = c; // Character assigned to a position in buffer
     }
     position++;
 
