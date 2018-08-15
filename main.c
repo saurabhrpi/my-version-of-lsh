@@ -172,7 +172,7 @@ char *lsh_read_line(void)
       exit(EXIT_SUCCESS); //Exit successfully
     } else if (c == '\n') {
       buffer[position] = '\0';
-      return buffer;
+      return buffer; // This is the only place where the return takes place
     } else {
       buffer[position] = c;
     }
