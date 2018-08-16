@@ -208,10 +208,7 @@ char **lsh_split_line(char *line)
     exit(EXIT_FAILURE);
   }
 
-  printf("line before strtok: %s\n",line);
   token = strtok(line, LSH_TOK_DELIM);
-  printf("line after strtok: %s\n",line);
-  printf("token: %s\n",token);
   while (token != NULL) {
     tokens[position] = token;
     position++;
