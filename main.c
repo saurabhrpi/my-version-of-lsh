@@ -223,9 +223,7 @@ char **lsh_split_line(char *line)
         exit(EXIT_FAILURE);
       }
     }
-    printf("token before second strtok : %s\n",token);
     token = strtok(NULL, LSH_TOK_DELIM);
-    printf("token after second strtok: %s\n",token);
  }
   tokens[position] = NULL;
   return tokens;
