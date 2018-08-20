@@ -241,7 +241,6 @@ void lsh_loop(void)
   do {
     printf("> ");
     line = lsh_read_line();
-    printf("line obtained from read_line: %s\n", line);
     args = lsh_split_line(line);
     status = lsh_execute(args);
 
