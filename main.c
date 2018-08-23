@@ -239,7 +239,7 @@ void lsh_loop(void)
   int status;
 
   do {
-    printf("> ");
+    printf("> "); // Not a debugging statement but a prompt
     line = lsh_read_line();
     args = lsh_split_line(line);
     status = lsh_execute(args);
