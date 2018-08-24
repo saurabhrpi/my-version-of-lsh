@@ -240,9 +240,9 @@ void lsh_loop(void)
 
   do {
     printf("> "); // Not a debugging statement but a prompt
-    line = lsh_read_line();
-    args = lsh_split_line(line);
-    status = lsh_execute(args);
+    line = lsh_read_line(); // read the inputs
+    args = lsh_split_line(line); // split them into commands and args
+    status = lsh_execute(args); // execute the commands
 
     free(line);
     free(args);
