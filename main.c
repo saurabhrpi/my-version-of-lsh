@@ -252,7 +252,7 @@ void lsh_loop(void)
 /**
    @brief Main entry point.
    @param argc Argument count.
-   @param argv Argument vector.
+   @param argv Argument vector (string).
    @return status code
  */
 int main(int argc, char **argv)
