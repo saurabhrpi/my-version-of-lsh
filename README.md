@@ -1,6 +1,6 @@
 # my-version-of-lsh
 
-LSH is a simple implementation of a shell in C, taken from [here](https://github.com/brenns10/lsh).  
+LSH is a simple implementation of a [shell](https://en.wikipedia.org/wiki/Shell_(computing)) in C, taken from [here](https://github.com/brenns10/lsh).  
 
 It demonstrates the basics of how a shell works. That is: read, parse, fork, exec, and wait.  
 
