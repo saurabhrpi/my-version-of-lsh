@@ -234,8 +234,8 @@ char **lsh_split_line(char *line)
  */
 void lsh_loop(void)
 {
-  char *line;
-  char **args;
+  char *line; // for one string input
+  char **args; // to store the multiple strings made from splitting the input
   int status;
 
   do {
