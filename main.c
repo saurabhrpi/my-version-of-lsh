@@ -264,6 +264,6 @@ int main(int argc, char **argv)
 
   // Perform any shutdown/cleanup.
 
-  return EXIT_SUCCESS;
+  return EXIT_SUCCESS; // defined in stdlib.h
 }
 
