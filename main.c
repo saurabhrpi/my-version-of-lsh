@@ -38,6 +38,9 @@ int (*builtin_func[]) (char **) = {
   &lsh_exit
 };
 
+/*
+To help iterate over all the commands as an output of help command
+*/
 int lsh_num_builtins() {
   return sizeof(builtin_str) / sizeof(char *);
 }
