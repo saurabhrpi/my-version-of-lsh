@@ -4,7 +4,7 @@ LSH (or LibStephen Shell) is a simple implementation of a [shell](https://en.wik
 
 In the honor of the original author, the name has been kept as is.
 
-It demonstrates the basics of how a shell works. That is: read, parse, fork, exec, and wait.  
+It demonstrates the basics of how a shell works. That is: read, parse, fork, exec, and wait. To know more about these system calls, please click [here](https://en.wikipedia.org/wiki/System_call). 
 
 Since the purpose is to create a simple shell, it has the following limitations:  
   
