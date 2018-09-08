@@ -56,6 +56,7 @@ int lsh_num_builtins() {
  */
 int lsh_cd(char **args)
 {
+  //mandatory argument error check	
   if (args[1] == NULL) {
     fprintf(stderr, "lsh: expected argument to \"cd\"\n");
   } else {
