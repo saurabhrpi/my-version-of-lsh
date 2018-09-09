@@ -148,7 +148,7 @@ int lsh_execute(char **args)
   }
 
   // if the entered args don't match any of the built-in commands		
-  printf("lsh_launch ret :%d\n",lsh_launch(args));
+  
   return lsh_launch(args);  
 }
 
