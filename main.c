@@ -107,7 +107,7 @@ int lsh_launch(char **args)
   pid_t pid;
   int status;   // a variable modified by waitpid() and then subsequently checked by wifexited and wifsignaled
 
-  pid = fork();
+  pid = fork(); // Child is created from the parent
   if (pid == 0) {
     // Child process
     if (execvp(args[0], args) == -1) {
