@@ -61,7 +61,7 @@ int lsh_cd(char **args)
     fprintf(stderr, "lsh: expected argument to \"cd\"\n");
   } else {
       if (chdir(args[1]) != 0) {
-       perror("lsh");
+       perror("lsh"); //Using perror to output customized error
     }
   }
   return 1;
