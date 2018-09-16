@@ -120,7 +120,7 @@ int lsh_launch(char **args)
   } else {
     // Parent process
     do {
-      waitpid(pid, &status, WUNTRACED);
+      waitpid(pid, &status, WUNTRACED); // wait for the child process to finish
     } while (!WIFEXITED(status) && !WIFSIGNALED(status)); // Check if the condition holds for the updated value of status 
   }
   // only parent process reaches here
