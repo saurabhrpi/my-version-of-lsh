@@ -27,7 +27,7 @@ char *builtin_str[] = {
   "cd",
   "help",
   "exit"
-};
+}; 
 
 /*
 Array of Function pointers one for each declared above
@@ -46,7 +46,7 @@ int lsh_num_builtins() {
 }
 
 /*
-  Builtin function implementations.
+  Builtin function implementations
 */
 
 /**
